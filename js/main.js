@@ -25,15 +25,15 @@ function setup(){
           x=0;
         //move y down
             y += 270;
-        }
-}
-    }
+        }//end if
+}//end for loope
+    }//end for setup
 function draw(){}
 
 function drawWindow(startX,startY){
     strokeWeight(1);
     stroke('Green');
-    fill('DarkGrey');
+    fill('BurlyWood');
     rect(startX,startY,100,250);
 
     //strokeWeight(1);
