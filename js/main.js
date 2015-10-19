@@ -34,11 +34,16 @@ function drawWindow(startX,startY){
     strokeWeight(1);
     stroke('Green');
     fill('BurlyWood');
-    rect(startX,startY,100,250);
+    var winWidth = 100;
+    var winHeight = 250;
+    rect(startX,startY,winWidth,winHeight);
 
     //strokeWeight(1);
     //stroke('LightCoral');
     //fill('AntiqueWhite');
     //rect(startX,startY,150,250);
-
+    line(startX + winWidth/2, startY, startX + winWidth/2,startY+winHeight);
+    line(startX,startY+winHeight/3,startX+winWidth, startY+winHeight/3);
+    line(startX, startY+winHeight*.66, startX+winWidth,startY+winHeight*.66);
 }
+
