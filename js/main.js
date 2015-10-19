@@ -8,14 +8,24 @@ function setup(){
 
 
 
-    drawWindow(50,50); //call the function
-    drawWindow(200,50);//call the function
+    //drawWindow(50,50); //call the function
+    //drawWindow(200,50);//call the function
    // drawWindow(450,50);//call the function
-
-    for(var i=2; i<100; i++){
+    var x = 0;
+    var y = 0;
+    var gridWidth = width-100;
+    for(var i=0; i<100; i++){
     console.log(i);
-        drawWindow(50*i,50);
-
+        drawWindow(x,y);
+        //increment our x
+        x +=120;//same as x = x +120
+        //check if x is past the grid width
+        if(x > gridWidth){
+        //set x back to the beginning
+          x=0;
+        //move y down
+            y += 270;
+        }
 }
     }
 function draw(){}
@@ -23,7 +33,7 @@ function draw(){}
 function drawWindow(startX,startY){
     strokeWeight(1);
     stroke('Green');
-    fill('MediumTurquoise');
+    fill('DarkGrey');
     rect(startX,startY,100,250);
 
     //strokeWeight(1);
