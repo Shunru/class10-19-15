@@ -7,20 +7,24 @@ function setup(){
 
 
 
-    drawWindow(50,50,'MediumTurquoise'); //call the function
-    drawWindow(250,50,'Sienna');//call the function
-    drawWindow(450,50,'SteelBlue');//call the function
 
+    drawWindow(50,50); //call the function
+    drawWindow(200,50);//call the function
+   // drawWindow(450,50);//call the function
+
+    for(var i=2; i<100; i++){
+    console.log(i);
+        drawWindow(50*i,50);
 
 }
-
+    }
 function draw(){}
 
-function drawWindow(startX,startY,winColor){
+function drawWindow(startX,startY){
     strokeWeight(1);
     stroke('Green');
-    fill(winColor);
-    rect(startX,startY,150,250);
+    fill('MediumTurquoise');
+    rect(startX,startY,100,250);
 
     //strokeWeight(1);
     //stroke('LightCoral');
